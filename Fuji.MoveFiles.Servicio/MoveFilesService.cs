@@ -1,6 +1,7 @@
 ﻿using Fuji.MoveFiles.Servicio.database;
 using Fuji.MoveFiles.Servicio.Entidades;
 using Fuji.MoveFiles.Servicio.Extensions;
+using Fuji.MoveFiles.Servicio.Feed2Service;
 using System;
 using System.Configuration;
 using System.IO;
@@ -18,7 +19,7 @@ namespace Fuji.MoveFiles.Servicio
         public static string AETitle = "";
         public static string vchPathRep = "";
         public static string path = "";
-        public static clsConfiguracion _conf;
+        public static Entidades.clsConfiguracion _conf;
 
         public MoveFilesService()
         {
@@ -88,7 +89,37 @@ namespace Fuji.MoveFiles.Servicio
         {
             try
             {
+                NapoleonServerDataAccess NSDA = new NapoleonServerDataAccess();
+                ClienteF2CResponse lista_estudios = NSDA.getEstudiosTransmitir(id_Servicio, vchClaveSitio);
 
+                foreach (var ID in lista_estudios.lstEstudio)
+                {
+
+                    //string filename = @"C:\Anonymized20171205.dcm";
+
+                    string filename = ID.vchPathFile;
+
+                    String strFile = System.IO.Path.GetFileName(filename);
+                    FileInfo fInfo = new FileInfo(filename);
+                    long numBytes = fInfo.Length;
+                    double dLen = Convert.ToDouble(fInfo.Length / 1000000);
+
+                    FileStream fStream = new FileStream(filename, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fStream);
+
+                    // convert the file to a byte array 
+                    byte[] data = br.ReadBytes((int)numBytes);
+                    br.Close();
+                    ServicioMueveEstudio.Service1Client SM = new ServicioMueveEstudio.Service1Client();
+                    string path_mover = id_Servicio + @"\" + DateTime.Now.ToString("ddMMyyyy") + @"\";
+                    string path_mover_completo = id_Servicio + @"\" + DateTime.Now.ToString("ddMMyyyy") + @"\" + Path.GetFileName(filename);
+                    string sTmp = SM.Carga_Archivo_F33D2(data, strFile, path_mover); 
+                    fStream.Close();
+                    fStream.Dispose();
+
+                    NSDA.updateEstatusTransmitido(ID.intEstudioID, id_Servicio, vchClaveSitio, path_mover_completo);
+
+                }
             }
             catch (Exception eSYTi)
             {

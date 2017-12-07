@@ -2767,6 +2767,9 @@ namespace Fuji.MoveFiles.Servicio.Feed2Service {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> bitFileCompleteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> datFechaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -2797,6 +2800,9 @@ namespace Fuji.MoveFiles.Servicio.Feed2Service {
         private string vchPathFileField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchPathServidorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string vchStudyInstanceUIDField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -2806,6 +2812,19 @@ namespace Fuji.MoveFiles.Servicio.Feed2Service {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> bitFileComplete {
+            get {
+                return this.bitFileCompleteField;
+            }
+            set {
+                if ((this.bitFileCompleteField.Equals(value) != true)) {
+                    this.bitFileCompleteField = value;
+                    this.RaisePropertyChanged("bitFileComplete");
+                }
             }
         }
         
@@ -2935,6 +2954,19 @@ namespace Fuji.MoveFiles.Servicio.Feed2Service {
                 if ((object.ReferenceEquals(this.vchPathFileField, value) != true)) {
                     this.vchPathFileField = value;
                     this.RaisePropertyChanged("vchPathFile");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchPathServidor {
+            get {
+                return this.vchPathServidorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchPathServidorField, value) != true)) {
+                    this.vchPathServidorField = value;
+                    this.RaisePropertyChanged("vchPathServidor");
                 }
             }
         }
@@ -6240,6 +6272,9 @@ namespace Fuji.MoveFiles.Servicio.Feed2Service {
         private string vchPasswordField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchPathServerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string vchUsuarioField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -6378,6 +6413,19 @@ namespace Fuji.MoveFiles.Servicio.Feed2Service {
                 if ((object.ReferenceEquals(this.vchPasswordField, value) != true)) {
                     this.vchPasswordField = value;
                     this.RaisePropertyChanged("vchPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchPathServer {
+            get {
+                return this.vchPathServerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchPathServerField, value) != true)) {
+                    this.vchPathServerField = value;
+                    this.RaisePropertyChanged("vchPathServer");
                 }
             }
         }
@@ -7074,6 +7122,24 @@ namespace Fuji.MoveFiles.Servicio.Feed2Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getEstudiosEnviar", ReplyAction="http://tempuri.org/INapoleonService/getEstudiosEnviarResponse")]
         System.Threading.Tasks.Task<Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse> getEstudiosEnviarAsync(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getEstudiosEnviarServer", ReplyAction="http://tempuri.org/INapoleonService/getEstudiosEnviarServerResponse")]
+        Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse getEstudiosEnviarServer(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getEstudiosEnviarServer", ReplyAction="http://tempuri.org/INapoleonService/getEstudiosEnviarServerResponse")]
+        System.Threading.Tasks.Task<Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse> getEstudiosEnviarServerAsync(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getEstudiosTransmitir", ReplyAction="http://tempuri.org/INapoleonService/getEstudiosTransmitirResponse")]
+        Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse getEstudiosTransmitir(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getEstudiosTransmitir", ReplyAction="http://tempuri.org/INapoleonService/getEstudiosTransmitirResponse")]
+        System.Threading.Tasks.Task<Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse> getEstudiosTransmitirAsync(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateEstatusTransmitir", ReplyAction="http://tempuri.org/INapoleonService/updateEstatusTransmitirResponse")]
+        Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse updateEstatusTransmitir(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateEstatusTransmitir", ReplyAction="http://tempuri.org/INapoleonService/updateEstatusTransmitirResponse")]
+        System.Threading.Tasks.Task<Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse> updateEstatusTransmitirAsync(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateEstatus", ReplyAction="http://tempuri.org/INapoleonService/updateEstatusResponse")]
         Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse updateEstatus(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request);
         
@@ -7432,6 +7498,30 @@ namespace Fuji.MoveFiles.Servicio.Feed2Service {
         
         public System.Threading.Tasks.Task<Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse> getEstudiosEnviarAsync(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request) {
             return base.Channel.getEstudiosEnviarAsync(request);
+        }
+        
+        public Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse getEstudiosEnviarServer(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request) {
+            return base.Channel.getEstudiosEnviarServer(request);
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse> getEstudiosEnviarServerAsync(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request) {
+            return base.Channel.getEstudiosEnviarServerAsync(request);
+        }
+        
+        public Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse getEstudiosTransmitir(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request) {
+            return base.Channel.getEstudiosTransmitir(request);
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse> getEstudiosTransmitirAsync(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request) {
+            return base.Channel.getEstudiosTransmitirAsync(request);
+        }
+        
+        public Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse updateEstatusTransmitir(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request) {
+            return base.Channel.updateEstatusTransmitir(request);
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse> updateEstatusTransmitirAsync(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request) {
+            return base.Channel.updateEstatusTransmitirAsync(request);
         }
         
         public Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse updateEstatus(Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CRequest request) {

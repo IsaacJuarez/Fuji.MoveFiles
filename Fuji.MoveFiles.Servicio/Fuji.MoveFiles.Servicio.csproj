@@ -49,6 +49,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicioMueveEstudio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="database\NapoleonServerDataAccess.cs" />
     <Compile Include="Entidades\clsConfiguracion.cs" />
     <Compile Include="Extensions\Log.cs" />
@@ -125,28 +130,39 @@
     <None Include="Connected Services\Feed2Service\Fuji.MoveFiles.Servicio.Feed2Service.tbl_REL_ProyectoSitio.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Feed2Service\NapoleonService.wsdl" />
-    <None Include="Connected Services\Feed2Service\NapoleonService.xsd">
+    <None Include="Connected Services\Feed2Service\NapoleonService1.wsdl" />
+    <None Include="Connected Services\Feed2Service\NapoleonService5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Feed2Service\NapoleonService1.xsd">
+    <None Include="Connected Services\Feed2Service\NapoleonService51.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Feed2Service\NapoleonService2.xsd">
+    <None Include="Connected Services\Feed2Service\NapoleonService52.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Feed2Service\NapoleonService3.xsd">
+    <None Include="Connected Services\Feed2Service\NapoleonService53.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Feed2Service\NapoleonService4.xsd">
+    <None Include="Connected Services\Feed2Service\NapoleonService54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioMueveEstudio\Bibl_F33D2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioMueveEstudio\Fuji.MoveFiles.Servicio.ServicioMueveEstudio.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioMueveEstudio\service.wsdl" />
+    <None Include="Connected Services\ServicioMueveEstudio\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioMueveEstudio\service1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\Feed2Service\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\Feed2Service\NapoleonService.disco" />
+    <WCFMetadataStorage Include="Connected Services\ServicioMueveEstudio\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\Feed2Service\configuration91.svcinfo" />
@@ -159,6 +175,21 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicioMueveEstudio\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicioMueveEstudio\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicioMueveEstudio\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Feed2Service\NapoleonService1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

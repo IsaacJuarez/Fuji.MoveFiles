@@ -212,6 +212,7 @@
   <xs:element name="ArrayOftbl_DET_Estudio" nillable="true" type="tns:ArrayOftbl_DET_Estudio" />
   <xs:complexType name="tbl_DET_Estudio">
     <xs:sequence>
+      <xs:element minOccurs="0" name="bitFileComplete" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="datFecha" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="intDetEstudioID" type="xs:int" />
       <xs:element minOccurs="0" name="intEstatusID" nillable="true" type="xs:int" />
@@ -222,6 +223,7 @@
       <xs:element minOccurs="0" name="tbl_MST_Estudio" nillable="true" type="tns:tbl_MST_Estudio" />
       <xs:element minOccurs="0" name="vchNameFile" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="vchPathFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchPathServidor" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="vchStudyInstanceUID" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

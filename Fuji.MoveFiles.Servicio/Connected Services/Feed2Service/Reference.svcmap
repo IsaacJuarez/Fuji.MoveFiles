@@ -19,16 +19,16 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://201.149.27.38:9010/Services/NapoleonService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost/Napoleon/Services/NapoleonService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="NapoleonService.wsdl" MetadataType="Wsdl" ID="ad7243fa-03a9-47c9-99ff-b127f830c9d1" SourceId="1" SourceUrl="http://201.149.27.38:9010/Services/NapoleonService.svc?wsdl" />
-    <MetadataFile FileName="NapoleonService.xsd" MetadataType="Schema" ID="8ffe9d03-037b-4640-b080-2a7bce7f7f7d" SourceId="1" SourceUrl="http://201.149.27.38:9010/Services/NapoleonService.svc?xsd=xsd1" />
-    <MetadataFile FileName="NapoleonService1.xsd" MetadataType="Schema" ID="a0fe4a0d-bcbd-41d2-b4b3-d4e701b0442b" SourceId="1" SourceUrl="http://201.149.27.38:9010/Services/NapoleonService.svc?xsd=xsd0" />
-    <MetadataFile FileName="NapoleonService2.xsd" MetadataType="Schema" ID="9945ae2a-dd15-4534-86ae-468ce9136963" SourceId="1" SourceUrl="http://201.149.27.38:9010/Services/NapoleonService.svc?xsd=xsd3" />
-    <MetadataFile FileName="NapoleonService3.xsd" MetadataType="Schema" ID="f7976b53-aa74-4ad3-b293-bb8c5ca4eeca" SourceId="1" SourceUrl="http://201.149.27.38:9010/Services/NapoleonService.svc?xsd=xsd2" />
-    <MetadataFile FileName="NapoleonService4.xsd" MetadataType="Schema" ID="f4e8c257-7f56-45fe-8ffd-e93e38a2199c" SourceId="1" SourceUrl="http://201.149.27.38:9010/Services/NapoleonService.svc?xsd=xsd4" />
-    <MetadataFile FileName="NapoleonService.disco" MetadataType="Disco" ID="62b25b7a-1d72-459a-92f8-94f54ab22c81" SourceId="1" SourceUrl="http://201.149.27.38:9010/Services/NapoleonService.svc?disco" />
+    <MetadataFile FileName="NapoleonService5.xsd" MetadataType="Schema" ID="f6fc2341-e6cf-4c97-9cfa-942504399e47" SourceId="1" SourceUrl="http://localhost/Napoleon/Services/NapoleonService.svc?xsd=xsd1" />
+    <MetadataFile FileName="NapoleonService51.xsd" MetadataType="Schema" ID="506f4997-624b-4243-aa7c-2dfc0cbe9172" SourceId="1" SourceUrl="http://localhost/Napoleon/Services/NapoleonService.svc?xsd=xsd4" />
+    <MetadataFile FileName="NapoleonService52.xsd" MetadataType="Schema" ID="e8c142db-158b-4930-82ff-ffdd991c5b08" SourceId="1" SourceUrl="http://localhost/Napoleon/Services/NapoleonService.svc?xsd=xsd2" />
+    <MetadataFile FileName="NapoleonService1.disco" MetadataType="Disco" ID="f4d56adc-d067-4096-b10f-e52d95becf7e" SourceId="1" SourceUrl="http://localhost/Napoleon/Services/NapoleonService.svc?disco" />
+    <MetadataFile FileName="NapoleonService53.xsd" MetadataType="Schema" ID="bd78a258-0e05-470c-9ade-3fa7fa8dd834" SourceId="1" SourceUrl="http://localhost/Napoleon/Services/NapoleonService.svc?xsd=xsd3" />
+    <MetadataFile FileName="NapoleonService1.wsdl" MetadataType="Wsdl" ID="27f14b8c-ae7c-4f7e-a8e5-28933016457d" SourceId="1" SourceUrl="http://localhost/Napoleon/Services/NapoleonService.svc?wsdl" />
+    <MetadataFile FileName="NapoleonService54.xsd" MetadataType="Schema" ID="b1345f52-666a-4e5a-b618-5d000e13e9dd" SourceId="1" SourceUrl="http://localhost/Napoleon/Services/NapoleonService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
