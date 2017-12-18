@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.5.114/SERV_FEEDT2/Bibl_F33D2.Service1.svc/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost/Feed2MoveFileService/Bibl_F33D2.Service1.svc/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="9e2ccc4e-af35-42e6-9b39-decde101e8ba" SourceId="1" SourceUrl="http://192.168.5.114/SERV_FEEDT2/Bibl_F33D2.Service1.svc/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="fddbe1db-0ad7-4a70-a627-0449d595222b" SourceId="1" SourceUrl="http://192.168.5.114/SERV_FEEDT2/Bibl_F33D2.Service1.svc/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="7699806a-19b6-4925-b169-e084474b3d62" SourceId="1" SourceUrl="http://192.168.5.114/SERV_FEEDT2/Bibl_F33D2.Service1.svc/mex" />
-    <MetadataFile FileName="Bibl_F33D2.xsd" MetadataType="Schema" ID="d64d57aa-0bfe-4e3b-b3e5-db3621b8a261" SourceId="1" SourceUrl="http://192.168.5.114/SERV_FEEDT2/Bibl_F33D2.Service1.svc/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="a64a60ed-b005-451d-aedf-2ec320f0c158" SourceId="1" SourceUrl="http://localhost/Feed2MoveFileService/Bibl_F33D2.Service1.svc/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="0c21a5f8-d0d6-45e0-a6d9-926cbb63c68d" SourceId="1" SourceUrl="http://localhost/Feed2MoveFileService/Bibl_F33D2.Service1.svc/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="a92add69-acd2-4ffe-a308-f05d1fee102b" SourceId="1" SourceUrl="http://localhost/Feed2MoveFileService/Bibl_F33D2.Service1.svc/mex" />
+    <MetadataFile FileName="Bibl_F33D21.xsd" MetadataType="Schema" ID="93df6a4a-9873-4e2d-b2a4-345f75879aad" SourceId="1" SourceUrl="http://localhost/Feed2MoveFileService/Bibl_F33D2.Service1.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

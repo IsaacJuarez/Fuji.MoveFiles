@@ -2,6 +2,7 @@
 using Fuji.MoveFiles.Servicio.Entidades;
 using Fuji.MoveFiles.Servicio.Extensions;
 using Fuji.MoveFiles.Servicio.Feed2Service;
+using Fuji.MoveFiles.Servicio.ServicioMueveEstudio;
 using System;
 using System.Configuration;
 using System.IO;
@@ -113,11 +114,25 @@ namespace Fuji.MoveFiles.Servicio
                     ServicioMueveEstudio.Service1Client SM = new ServicioMueveEstudio.Service1Client();
                     string path_mover = id_Servicio + @"\" + DateTime.Now.ToString("ddMMyyyy") + @"\";
                     string path_mover_completo = id_Servicio + @"\" + DateTime.Now.ToString("ddMMyyyy") + @"\" + Path.GetFileName(filename);
-                    string sTmp = SM.Carga_Archivo_F33D2(data, strFile, path_mover); 
+                    CArchivo request = new CArchivo();
+                    request.bytArchivo = data;
+                    request.id_Sitio = id_Servicio;
+                    request.vchpath = path_mover;
+                    request.Token = Security.Encrypt(id_Servicio + "|" + vchClaveSitio);
+                    request.vchClaveSitio = vchClaveSitio;
+                    request.vchfilename = strFile;
+                    string sTmp = SM.Carga_Archivo_F33D2(request); 
                     fStream.Close();
                     fStream.Dispose();
 
-                    NSDA.updateEstatusTransmitido(ID.intEstudioID, id_Servicio, vchClaveSitio, path_mover_completo);
+                    if (sTmp == "OK")
+                    {
+                        NSDA.updateEstatusTransmitido(ID.intDetEstudioID, id_Servicio, vchClaveSitio, path_mover_completo);
+                    }
+                    else
+                    {
+                        Log.EscribeLog("NO SE LOGRÓ HACER EL ENVÍO DEL ARCHIVO: " + filename + " , error: " + sTmp);
+                    }
 
                 }
             }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="I5zB1jKO3/MW2AlLKDF+nVxZOqw=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="qeflCiPVyn9bVUT/yiuKVFVrHrQ=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IService1">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IService1" contract="ServicioMueveEstudio.IService1" bindingType="basicHttpBinding" address="http://desktop-e8i0oan/SERV_FEEDT2/Bibl_F33D2.Service1.svc" bindingConfiguration="BasicHttpBinding_IService1">
+    <endpoint name="BasicHttpBinding_IService1" contract="ServicioMueveEstudio.IService1" bindingType="basicHttpBinding" address="http://desktop-6c1tbcq/Feed2MoveFileService/Bibl_F33D2.Service1.svc" bindingConfiguration="BasicHttpBinding_IService1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://desktop-e8i0oan/SERV_FEEDT2/Bibl_F33D2.Service1.svc</serializedValue>
+          <serializedValue>http://desktop-6c1tbcq/Feed2MoveFileService/Bibl_F33D2.Service1.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

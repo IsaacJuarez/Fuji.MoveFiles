@@ -74,6 +74,131 @@ namespace Fuji.MoveFiles.Servicio.ServicioMueveEstudio {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CArchivo", Namespace="http://schemas.datacontract.org/2004/07/Bibl_F33D2")]
+    [System.SerializableAttribute()]
+    public partial class CArchivo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TokenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] bytArchivoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int id_SitioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchClaveSitioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchfilenameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchpathField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Token {
+            get {
+                return this.TokenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TokenField, value) != true)) {
+                    this.TokenField = value;
+                    this.RaisePropertyChanged("Token");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] bytArchivo {
+            get {
+                return this.bytArchivoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bytArchivoField, value) != true)) {
+                    this.bytArchivoField = value;
+                    this.RaisePropertyChanged("bytArchivo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id_Sitio {
+            get {
+                return this.id_SitioField;
+            }
+            set {
+                if ((this.id_SitioField.Equals(value) != true)) {
+                    this.id_SitioField = value;
+                    this.RaisePropertyChanged("id_Sitio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchClaveSitio {
+            get {
+                return this.vchClaveSitioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchClaveSitioField, value) != true)) {
+                    this.vchClaveSitioField = value;
+                    this.RaisePropertyChanged("vchClaveSitio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchfilename {
+            get {
+                return this.vchfilenameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchfilenameField, value) != true)) {
+                    this.vchfilenameField = value;
+                    this.RaisePropertyChanged("vchfilename");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchpath {
+            get {
+                return this.vchpathField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchpathField, value) != true)) {
+                    this.vchpathField = value;
+                    this.RaisePropertyChanged("vchpath");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServicioMueveEstudio.IService1")]
     public interface IService1 {
@@ -91,10 +216,10 @@ namespace Fuji.MoveFiles.Servicio.ServicioMueveEstudio {
         System.Threading.Tasks.Task<Fuji.MoveFiles.Servicio.ServicioMueveEstudio.CompositeType> GetDataUsingDataContractAsync(Fuji.MoveFiles.Servicio.ServicioMueveEstudio.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Carga_Archivo_F33D2", ReplyAction="http://tempuri.org/IService1/Carga_Archivo_F33D2Response")]
-        string Carga_Archivo_F33D2(byte[] f, string fileName, string nombre_carpeta);
+        string Carga_Archivo_F33D2(Fuji.MoveFiles.Servicio.ServicioMueveEstudio.CArchivo request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Carga_Archivo_F33D2", ReplyAction="http://tempuri.org/IService1/Carga_Archivo_F33D2Response")]
-        System.Threading.Tasks.Task<string> Carga_Archivo_F33D2Async(byte[] f, string fileName, string nombre_carpeta);
+        System.Threading.Tasks.Task<string> Carga_Archivo_F33D2Async(Fuji.MoveFiles.Servicio.ServicioMueveEstudio.CArchivo request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -140,12 +265,12 @@ namespace Fuji.MoveFiles.Servicio.ServicioMueveEstudio {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
-        public string Carga_Archivo_F33D2(byte[] f, string fileName, string nombre_carpeta) {
-            return base.Channel.Carga_Archivo_F33D2(f, fileName, nombre_carpeta);
+        public string Carga_Archivo_F33D2(Fuji.MoveFiles.Servicio.ServicioMueveEstudio.CArchivo request) {
+            return base.Channel.Carga_Archivo_F33D2(request);
         }
         
-        public System.Threading.Tasks.Task<string> Carga_Archivo_F33D2Async(byte[] f, string fileName, string nombre_carpeta) {
-            return base.Channel.Carga_Archivo_F33D2Async(f, fileName, nombre_carpeta);
+        public System.Threading.Tasks.Task<string> Carga_Archivo_F33D2Async(Fuji.MoveFiles.Servicio.ServicioMueveEstudio.CArchivo request) {
+            return base.Channel.Carga_Archivo_F33D2Async(request);
         }
     }
 }

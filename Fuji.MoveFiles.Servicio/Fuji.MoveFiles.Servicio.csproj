@@ -5,12 +5,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0E9882D9-3026-4B55-B920-53DBEEF706EB}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Fuji.MoveFiles.Servicio</RootNamespace>
     <AssemblyName>Fuji.MoveFiles.Servicio</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,10 +30,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\SetupFeed2V3\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\SetupFeed2V3\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceProcess" />
@@ -66,6 +79,12 @@
       <DependentUpon>MoveFilesService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,7 +94,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\Feed2Service\Fuji.MoveFiles.Servicio.Feed2Service.ClienteF2CResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -146,19 +167,20 @@
     <None Include="Connected Services\Feed2Service\NapoleonService54.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServicioMueveEstudio\Bibl_F33D2.xsd">
+    <None Include="Connected Services\ServicioMueveEstudio\Bibl_F33D21.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServicioMueveEstudio\Fuji.MoveFiles.Servicio.ServicioMueveEstudio.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServicioMueveEstudio\service.wsdl" />
-    <None Include="Connected Services\ServicioMueveEstudio\service.xsd">
+    <None Include="Connected Services\ServicioMueveEstudio\service1.wsdl" />
+    <None Include="Connected Services\ServicioMueveEstudio\service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServicioMueveEstudio\service1.xsd">
+    <None Include="Connected Services\ServicioMueveEstudio\service21.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\Feed2Service\" />
@@ -190,6 +212,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\Feed2Service\NapoleonService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
