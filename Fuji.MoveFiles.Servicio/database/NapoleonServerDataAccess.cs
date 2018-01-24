@@ -23,7 +23,7 @@ namespace Fuji.MoveFiles.Servicio.database
                 request.vchClaveSitio = vchClaveSitio;            
                 request.Token = Security.Encrypt(id_Sitio + "|" + vchClaveSitio);
                 response = NapoleonDA.getEstudiosTransmitir(request);
-                Log.EscribeLog("Archivos a enviar: " + response.lstEstudio.Count().ToString());
+                Log.EscribeLog("Archivos a enviar: " + response.lstEstudio.Length.ToString());
             }
 
             catch (Exception e)
